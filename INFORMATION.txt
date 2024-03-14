@@ -7,3 +7,10 @@ npx prisma init
 npx prisma db push
 npm install next-auth @prisma/client @next-auth/prisma-adapter
 npm install -D @types/bcrypt
+npm install query-string
+npm install world-countries
+npm install react-select 
+npm install leaflet 
+npm install -D @types/leaflet 
+npm install react-leaflet
+npm install next-cloudinary

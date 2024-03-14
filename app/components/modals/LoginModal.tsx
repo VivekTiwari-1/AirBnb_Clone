@@ -6,13 +6,13 @@ import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import useRegisterModal from "../hooks/useRegisterModal";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
 import toast from "react-hot-toast"; //Used to handle error and show a message
 import Button from "../Button";
-import useLoginModal from "../hooks/useLoginModal copy";
+import useLoginModal from "@/app/hooks/useLoginModal copy";
 import { useRouter } from "next/navigation";
 
 const LoginModal = () => {
@@ -52,6 +52,11 @@ const LoginModal = () => {
       }
       })
     }
+
+    const toggle = useCallback(() => {
+      loginModal.onClose();
+      registerModal.onOpen();
+    },[loginModal, registerModal]);
 
   const bodyContent = (
   <div className="flex flex-col gap-4">
@@ -98,15 +103,15 @@ const LoginModal = () => {
           font-light
         "
       >
-        <p>Already have an account?
+        <p>First time using Airbnb?
           <span 
-            onClick={registerModal.onClose} 
+            onClick={toggle} 
             className="
               text-neutral-800
               cursor-pointer 
               hover:underline
             "
-            > Log in</span>
+            > Create an Account</span>
         </p>
       </div>
       </div>
