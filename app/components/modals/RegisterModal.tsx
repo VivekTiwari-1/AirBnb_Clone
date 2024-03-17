@@ -12,7 +12,7 @@ import Input from "../inputs/Input";
 import toast from "react-hot-toast"; //Used to handle error and show a message
 import Button from "../Button";
 import { signIn } from "next-auth/react";
-import useLoginModal from "@/app/hooks/useLoginModal copy";
+import useLoginModal from "@/app/hooks/useLoginModal";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal(); //created instance of useRegMod function of hooks folder
@@ -38,7 +38,9 @@ const RegisterModal = () => {
     axios
       .post("/api/register", data)
       .then(() => {
+        toast.success("Success!");
         registerModal.onClose();
+        loginModal.onOpen();
       })
       .catch((error) => {
         toast.error("Something went wrong")
