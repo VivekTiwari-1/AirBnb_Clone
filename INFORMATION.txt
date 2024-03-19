@@ -14,3 +14,6 @@ npm install leaflet
 npm install -D @types/leaflet 
 npm install react-leaflet
 npm install next-cloudinary
+npm install date_fns
+npm install react-date-range
+npm install i -D @types/react-date-range
