@@ -1,19 +1,60 @@
 
+# AirBnb Clone Project
 
-## Getting Started
+## Description
+This project is a clone of AirBnb, featuring core functionalities that allow users to sign up, sign in, list properties, and manage bookings. Users can set detailed property information such as prices, location, and capacity. The application supports searching and booking properties across various locations and countries, managing favorite properties, and more.
 
+## Features
+- **User Authentication:** Sign up and sign in functionalities.
+- **Property Listing:** Users can list new properties with details like price, location, rooms, and guest capacity.
+- **Booking System:** Book properties using a calendar interface to select dates.
+- **Favorites Management:** Users can maintain a list of favorite properties.
+- **Search and Filter:** Search properties by location and filter based on different criteria.
 
+## Technology Stack
+- **Frontend:** NextJs, TailwindCSS, React
+- **Backend:** MongoDB, NodeJS, ExpressJS, Prisma, Axios
+- **State Management:** Zustand
+- **Image Upload:** Cloudinary
+- **Map:** Leaflet
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
+ ```
+ airbnb-clone/
+│
+├── pages/                  # Next.js pages directory
+│   ├── _app.js             # Main app configuration
+│   ├── index.js            # Home page
+│   ├── signin.js           # Sign-in page
+│   ├── signup.js           # Sign-up page
+│   └── ...
+│
+├── components/             # React components
+│   ├── inputs/             # Input components like the one provided
+│   │   └── Input.tsx
+│   ├── Header.js           # Site header component
+│   ├── Footer.js           # Site footer component
+│   └── ...
+│
+├── public/                 # Static files like images and fonts
+│
+├── styles/                 # CSS and Tailwind configuration files
+│   └── globals.css
+│
+├── lib/                    # Library code for backend processing
+│   ├── prisma.js           # Prisma client setup
+│   ├── auth.js             # Authentication helpers
+│   └── ...
+│
+├── prisma/                 # Prisma files
+│   └── schema.prisma       # Prisma schema file
+│
+├── utils/                  # Utility functions
+│
+├── node_modules/           # npm packages
+│
+└── package.json            # npm package manager file
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
+## Contributing
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or improvements.
