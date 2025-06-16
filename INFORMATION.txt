@@ -1,19 +1,6 @@
-npm install react-icons
-npm install zustand
-npm install axios
-npm install react-hot-toast
-npm install -D prisma
-npx prisma init
-npx prisma db push
-npm install next-auth @prisma/client @next-auth/prisma-adapter
-npm install -D @types/bcrypt
-npm install query-string
-npm install world-countries
-npm install react-select 
-npm install leaflet 
-npm install -D @types/leaflet 
-npm install react-leaflet
-npm install next-cloudinary
-npm install date_fns
-npm install react-date-range
-npm install i -D @types/react-date-range
+1. To list the filter based item, logic and query is written in the app/actions/getListings.ts file
+2. Suppose you want to delete or update any specific item of the various listed item, then you can use the logic used for listings and reservations based on their ID. Their IDs are passed as the params with while making api call like axios.delete(`/api/reservations/${id}`)
+
+3. In this project, all the folders and files inside api directory are like routes of the backend means we can fetch the data by hitting that endpoint. For example: POST request on api/reservations returns you the response with new reservation created data.
+
+4. MVC architecture: actions directory is similar to modals used to get information from database, while api is working as both route and controller as routing in Nextjs is based on file structure. Any page.js file created inside api directory is by default work as an endpoint in Nextjs.
